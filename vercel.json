@@ -11,8 +11,17 @@
     ],
     "routes": [
       {
+        "src": "/static/(.*)",
+        "dest": "/staticfiles/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "/media/$1"
+      },
+      {
         "src": "/(.*)",
         "dest": "python_vercel_task/wsgi.py"
       }
     ]
   }
+  
